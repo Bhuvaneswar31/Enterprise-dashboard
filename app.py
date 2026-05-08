@@ -7,7 +7,7 @@ import plotly.express as px
 # PAGE CONFIG
 # ---------------------------
 st.set_page_config(
-    page_title="Enterprise IT Solutions Dashboard",
+    page_title="IT Solutions Dashboard",
     layout="wide"
 )
 
@@ -225,7 +225,7 @@ roi = (
 # ---------------------------
 # HEADER
 # ---------------------------
-st.title("🚀 Enterprise IT Solutions SaaS Dashboard")
+st.title("IT Solutions SaaS Dashboard")
 
 # ---------------------------
 # KPI SECTION
@@ -241,7 +241,7 @@ k5.metric("Spend", f"₹{total_spend:,.0f}")
 # ---------------------------
 # ADVANCED METRICS
 # ---------------------------
-st.markdown("## 📊 Advanced Metrics")
+st.markdown("## Advanced Metrics")
 
 m1, m2, m3, m4 = st.columns(4)
 
@@ -253,7 +253,7 @@ m4.metric("ROI", f"{roi:.2%}")
 # ---------------------------
 # PERFORMANCE COMPARISON
 # ---------------------------
-st.markdown("## 🔍 Performance Comparison")
+st.markdown("## Performance Comparison")
 
 c1, c2 = st.columns(2)
 
@@ -317,7 +317,7 @@ with c2:
 # ---------------------------
 # ROI ANALYSIS
 # ---------------------------
-st.markdown("## 📢 ROI Performance Analysis")
+st.markdown("## ROI Performance Analysis")
 
 roi_channel = (
     filtered_df.groupby("Source")
@@ -359,7 +359,7 @@ st.plotly_chart(
 # ---------------------------
 # FORECAST ANALYSIS
 # ---------------------------
-st.markdown("## 🔮 Revenue Forecast")
+st.markdown("## Revenue Forecast")
 
 trend = (
     filtered_df.groupby("Date")["Revenue"]
